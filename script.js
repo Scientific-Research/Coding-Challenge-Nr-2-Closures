@@ -12,15 +12,16 @@ and now explain to YOURSELF (or someone around you) WHY this worked? Take all th
 GOOD LUCK 😀
 */
 
-// (function () {
-//   const header = document.querySelector("h1");
-//   header.style.color = "red";
-// })();
+(function () {
+  const body = document.querySelector("body");
+  const header = document.querySelector("h1");
+  const h2 = document.querySelector("h2");
 
-const header = document.querySelector("h1");
-const body = document.querySelector("body");
-
-body.addEventListener("click", () => {
-  console.log("Hallo");
   header.style.color = "red";
-});
+  h2.style.color = "blue";
+
+  body.addEventListener("click", () => {
+    header.style.color = "blue";
+    h2.style.color = "red";
+  });
+})();
